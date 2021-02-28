@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bela.InputResultPage">
+    <StackLayout>
+        <Label HeightRequest="50"
+               BackgroundColor="#B4CCDF"
+               Text="Unos rezultata" 
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               FontSize="Title"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Frame BorderColor="Black"
+                   CornerRadius="5"
+                   Margin="2"
+                   HasShadow="False"
+                   Padding="0">
+                <Label x:Name="MiLabel"
+                   FontSize="Large"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="MI">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Black"
+                   Grid.Column="1"
+                   CornerRadius="5"
+                   Margin="2"
+                   HasShadow="False"
+                   Padding="0">
+                <Label x:Name="ViLabel"
+                   FontSize="Large"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="VI">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Frame>
+            <Entry x:Name="miZvanje"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Placeholder="Zvanje"
+                   TextChanged="miZvanje_TextChanged"
+                   Keyboard="Numeric"/>
+            <Entry x:Name="viZvanje"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Placeholder="Zvanje"
+                   TextChanged="viZvanje_TextChanged"
+                   Keyboard="Numeric"/>
+            <Entry x:Name="miRezEntry"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   Placeholder="Igra"
+                   TextChanged="miRezEntry_TextChanged"
+                   Keyboard="Numeric"/>
+            <Entry x:Name="viRezEntry"
+                   Grid.Row="2"
+                   Grid.Column="1" 
+                   Placeholder="Igra"
+                   TextChanged="viRezEntry_TextChanged"
+                   Keyboard="Numeric"/>
+        </Grid>
+        <Button Text="UNESI"
+                Margin="5"
+                BackgroundColor="DeepSkyBlue"
+                FontSize="Body"
+                Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

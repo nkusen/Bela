@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bela.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#06A9DF" Padding="24" CornerRadius="0" AutomationProperties.IsInAccessibleTree="True">
+            <Label Text="BELA BLOK" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontFamily="Arial"/>
+        </Frame>
+        <Picker Margin="10"
+                x:Name="rezLimit"
+                FontSize="Body"
+                Title="Igra do:">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>501</x:String>
+                    <x:String>701</x:String>
+                    <x:String>1001</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Margin="5,10,5,0"
+                BackgroundColor="#B4CCDF"
+                FontSize="Body"
+                Text="NOVA IGRA"
+                Clicked="Button_Clicked">
+        </Button>
+        <Button Margin="5,3,5,0"
+                BackgroundColor="#B4CCDF"
+                FontSize="Body"
+                Text="POSTOJEĆA IGRA"
+                Clicked="Button_Clicked_1">
+        </Button>
+        <Label Margin="0,0,20,8"
+               Text="Nikola Kušen"
+               FontSize="Micro"
+               VerticalOptions="FillAndExpand"
+               VerticalTextAlignment="End"
+               HorizontalTextAlignment="End" 
+               TextColor="#9E9E9E"/>
+    </StackLayout>
+
+</ContentPage>

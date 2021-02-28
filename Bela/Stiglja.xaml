@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bela.Stiglja">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     x:Name="MyLayout">
+            <Label Text="Štiglja&#x1F44F;"
+                x:Name="MyLabel"
+                FontSize="Header"
+                TextColor="SeaGreen"
+                HorizontalOptions="Center" />
+            <Label Text="+90"
+                FontSize="Title"
+                TextColor="SeaGreen"
+                HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
