@@ -17,12 +17,12 @@
                    x:Name="miPartije"
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"
-                   FontSize="Title"/>
+                   FontSize="28"/>
             <Label Grid.Column="1"
                    x:Name="viPartije"
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"
-                   FontSize="Title"/>
+                   FontSize="28"/>
         </Grid>
         <ListView x:Name="rezultati"
                   ItemSelected="rezultati_ItemSelected"
@@ -66,12 +66,12 @@
                    x:Name="miUkupno"
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"
-                   FontSize="Title"/>
+                   FontSize="27"/>
             <Label Grid.Column="1"
                    x:Name="viUkupno"
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"
-                   FontSize="Title"/>
+                   FontSize="27"/>
         </Grid>
         <Button Margin="5"
                 FontSize="Body"

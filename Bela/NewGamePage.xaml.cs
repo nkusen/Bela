@@ -33,11 +33,6 @@ namespace bela
         {
             base.OnAppearing();
 
-            miPartije.FontSize *= 1.145;
-            viPartije.FontSize *= 1.145;
-            miUkupno.FontSize *= 1.09;
-            viUkupno.FontSize *= 1.09;
-
             using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(App.DB_PATH))
             {
                 connection.CreateTable<Result>();
