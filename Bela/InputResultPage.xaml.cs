@@ -65,7 +65,7 @@ namespace bela
             GetResult(ref a, ref b, ref c, ref d);
             if (zvali == 0)
             {
-                if (d > 0 && (a + b <= c + d  || b == 0))
+                if (a + b <= c + d)
                 {
                     MiLabel.BackgroundColor = Color.DarkRed;
                     return true;
@@ -74,7 +74,7 @@ namespace bela
             }
             else
             {
-                if (b > 0 && (a + b >= c + d || d == 0))
+                if (a + b >= c + d)
                 {
                     ViLabel.BackgroundColor = Color.DarkRed;
                     return true;
@@ -108,20 +108,6 @@ namespace bela
             }
 
             GetResult(ref a, ref b, ref c, ref d);
-            bool isStiglja = false;
-
-            if (b == 0)
-            {
-                c += a + 90;
-                a = 0;
-                isStiglja = true;
-            }
-            else if (d == 0)
-            {
-                a += c + 90;
-                c = 0;
-                isStiglja = true;
-            }
 
             using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(App.DB_PATH))
             {
@@ -142,11 +128,7 @@ namespace bela
                 }
             }
 
-            if (isStiglja)
-            {
-                Application.Current.MainPage.Navigation.PushAsync(new Stiglja(this));
-            }
-            else if (CheckPad())
+            if (CheckPad())
             {
                 Application.Current.MainPage.Navigation.PushAsync(new Pad(this));
             }
