@@ -22,8 +22,8 @@ namespace bela
             List<Par> ret = new List<Par>();
             foreach (var res in rawResults)
             {
-                if (res.Zvali == 0 && res.ViResult > 0 && (res.MiResult + res.MiZvanje <= res.ViResult + res.ViZvanje || res.MiResult == 0)) ret.Add(new Par { first = 0, second = res.MiZvanje + res.ViZvanje + 162 });
-                else if (res.Zvali == 1 && res.MiResult > 0 && (res.MiResult + res.MiZvanje >= res.ViResult + res.ViZvanje || res.ViResult == 0)) ret.Add(new Par { first = res.MiZvanje + res.ViZvanje + 162, second = 0 });
+                if (res.Zvali == 0 && res.MiResult + res.MiZvanje <= res.ViResult + res.ViZvanje) ret.Add(new Par { first = 0, second = res.MiZvanje + res.ViZvanje + 162 });
+                else if (res.Zvali == 1 && res.MiResult + res.MiZvanje >= res.ViResult + res.ViZvanje) ret.Add(new Par { first = res.MiZvanje + res.ViZvanje + 162, second = 0 });
                 else ret.Add(new Par { first = res.MiResult + res.MiZvanje, second = res.ViResult + res.ViZvanje });
             }
             return ret;
