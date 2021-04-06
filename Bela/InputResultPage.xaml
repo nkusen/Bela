@@ -23,7 +23,8 @@
                    CornerRadius="5"
                    Margin="2"
                    HasShadow="False"
-                   Padding="0">
+                   Padding="0"
+                   BackgroundColor="{AppThemeBinding Light=White, Dark=#030303}">
                 <Label x:Name="MiLabel"
                    FontSize="Large"
                    VerticalTextAlignment="Center"
@@ -39,7 +40,8 @@
                    CornerRadius="5"
                    Margin="2"
                    HasShadow="False"
-                   Padding="0">
+                   Padding="0"
+                   BackgroundColor="{AppThemeBinding Light=White, Dark=#030303}">
                 <Label x:Name="ViLabel"
                    FontSize="Large"
                    VerticalTextAlignment="Center"
