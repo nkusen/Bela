@@ -41,6 +41,18 @@ namespace bela
 
         private void Button_Clicked_1(object sender, EventArgs e)
         {
+            using (SQLite.SQLiteConnection connection = new SQLite.SQLiteConnection(App.DB_PATH))
+            {
+                connection.CreateTable<Result>();
+                var results = connection.Table<Result>().ToList();
+
+                if (results.Count() == 0)
+                {
+                    DisplayAlert("Greška", "Nije pronađena igra u bazi podataka, odaberite novu igru!", "Ok");
+                    return;
+                }
+            }
+
             IgraDo();
 
             Navigation.PushAsync(new NewGamePage());
