@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.1" package="com.companyname.bela" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="4" android:versionName="1.3" package="com.companyname.bela" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="34" />
 	<application android:label="Bela Blok.Android" android:theme="@style/MainTheme" android:icon="@mipmap/ikona"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
